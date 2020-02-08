@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import TwoWayBinding from "./Components/TwoWayBinding";
+import EventHandler from "./Components/EventHandler";
 import "./App.css";
 
 class App extends Component {
@@ -22,6 +23,9 @@ class App extends Component {
               <li>
                 <Link to={"/two-way-binding"}>Two Way Binding</Link>
               </li>
+              <li>
+                <Link to={"/event-handler"}>Event Handler</Link>
+              </li>
             </ul>
           </header>
           <hr />
@@ -29,6 +33,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/two-way-binding" component={TwoWayBinding} />
+            <Route exact path="/event-handler" component={EventHandler} />
           </Switch>
         </div>
       </Router>
